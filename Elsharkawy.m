@@ -1,6 +1,6 @@
 
 
-data = xlsread('your file's name.xlsx');
+data = xlsread('your file.xlsx');
 
 [numRows, ~] = size(data);
 

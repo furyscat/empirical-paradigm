@@ -1,13 +1,13 @@
 
 
-data = xlsread('文献数据.xlsx');
-% 获取数据的行数
+data = xlsread('your file's name.xlsx');
+
 [numRows, ~] = size(data);
 
-% 初始化一个结果数组
+
 results = zeros(numRows, 1);
 
-% 循环逐行计算
+
 for row = 1:numRows
     N2 = data(row, 1);
     CO2 = data(row, 2);
@@ -22,10 +22,10 @@ for row = 1:numRows
     SGC7 = data(row,11);
     MWC7 = data(row, 12);
     T = data(row, 13);
-    % 调用你的方程进行计算
+
 
     result = myEquation(N2,CO2,H2S,C1,C2,C3,C4,C5,C6,C7,MWC7,SGC7,T);
-    % 将结果存储在结果数组中
+
     results(row) = result;
     disp(result);
 end
